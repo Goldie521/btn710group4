@@ -21,6 +21,12 @@
       <div id="messageBox" class="jumbotron">
         The username is avvaldez@myseneca.ca
       </div>
+	  
+	  <div id="downloadreport">
+		</div>	  
+		<div id="video">
+		</div>	  
+		
       <!-- where the sign-in form will be displayed -->
       <div id="okta-login-container"></div>
     </div>
@@ -46,9 +52,8 @@
             oktaSignIn.tokenManager.add('idToken', idToken);
 
             window.location.hash='';
-            document.getElementById("messageBox").innerHTML = "<a href="https://firebasestorage.googleapis.com/v0/b/btn710group4.appspot.com/o/Deliverable3Report.docx?alt=media&token=d70647cd-8b0d-4c04-8c49-260f8f969edd">
-            <button class="btn"><i class="fa fa-download"></i> Download Report</button>
-            </a>";
+            document.getElementById("video").innerHTML = "https://www.youtube.com/watch?v=8t9h25DNNgU";
+			
           },
           function error(err) {
             console.error(err);
@@ -58,9 +63,7 @@
         oktaSignIn.session.get(function (res) {
           // If we get here, the user is already signed in.
           if (res.status === 'ACTIVE') {
-            document.getElementById("messageBox").innerHTML = "<a href="https://firebasestorage.googleapis.com/v0/b/btn710group4.appspot.com/o/Deliverable3Report.docx?alt=media&token=d70647cd-8b0d-4c04-8c49-260f8f969edd">
-            <button class="btn"><i class="fa fa-download"></i> Download Report</button>
-            </a>";
+            document.getElementById("video").innerHTML = "https://www.youtube.com/watch?v=8t9h25DNNgU";
            
             return;
           }
