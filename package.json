@@ -20,7 +20,8 @@
     "test": "npm run test:e2e",
     "test:e2e": "npm run test:okta-hosted-login && npm run test:custom-login && npm run test:resource-server",
     "pretest": "node ./scripts/update-se-drivers.js && node scripts/setup-env.js",
-    "webdriver-update-2.45": "webdriver-manager update --versions.standalone=3.141.59 --versions.chrome 2.45 --gecko false && node scripts/setup-env.js"
+    "webdriver-update-2.45": "webdriver-manager update --versions.standalone=3.141.59 --versions.chrome 2.45 --gecko false && node scripts/setup-env.js",
+	"start": "cd custom-login; node server"
   },
   "devDependencies": {
     "axios": "^0.20.0",
