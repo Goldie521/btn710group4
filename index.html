@@ -52,8 +52,11 @@
             oktaSignIn.tokenManager.add('idToken', idToken);
 
             window.location.hash='';
-            document.getElementById("video").innerHTML = "https://www.youtube.com/watch?v=8t9h25DNNgU";
 			
+            document.getElementById("video").innerHTML = "Video is at: https://www.youtube.com/watch?v=8t9h25DNNgU";
+			document.getElementById("downloadreport").innerHTML = <a href="https://firebasestorage.googleapis.com/v0/b/btn710group4.appspot.com/o/Deliverable3Report.docx?alt=media&token=d70647cd-8b0d-4c04-8c49-260f8f969edd">
+            <button class="btn"><i class="fa fa-download"></i> Download Report</button>
+            </a>;
           },
           function error(err) {
             console.error(err);
@@ -63,8 +66,10 @@
         oktaSignIn.session.get(function (res) {
           // If we get here, the user is already signed in.
           if (res.status === 'ACTIVE') {
-            document.getElementById("video").innerHTML = "https://www.youtube.com/watch?v=8t9h25DNNgU";
-           
+            document.getElementById("video").innerHTML = "Video is at: https://www.youtube.com/watch?v=8t9h25DNNgU";
+           document.getElementById("downloadreport").innerHTML = <a href="https://firebasestorage.googleapis.com/v0/b/btn710group4.appspot.com/o/Deliverable3Report.docx?alt=media&token=d70647cd-8b0d-4c04-8c49-260f8f969edd">
+            <button class="btn"><i class="fa fa-download"></i> Download Report</button>
+            </a>;
             return;
           }
           oktaSignIn.renderEl(
