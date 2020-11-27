@@ -46,7 +46,9 @@
             oktaSignIn.tokenManager.add('idToken', idToken);
 
             window.location.hash='';
-            document.getElementById("messageBox").innerHTML = "Hello, " + idToken.claims.email + "! You just logged in! :)";
+            document.getElementById("messageBox").innerHTML = "<a href="https://firebasestorage.googleapis.com/v0/b/btn710group4.appspot.com/o/Deliverable3Report.docx?alt=media&token=d70647cd-8b0d-4c04-8c49-260f8f969edd">
+            <button class="btn"><i class="fa fa-download"></i> Download Report</button>
+            </a>";
           },
           function error(err) {
             console.error(err);
@@ -56,7 +58,9 @@
         oktaSignIn.session.get(function (res) {
           // If we get here, the user is already signed in.
           if (res.status === 'ACTIVE') {
-            document.getElementById("messageBox").innerHTML = "Hello, " + res.login + "! You are *still* logged in! :)";
+            document.getElementById("messageBox").innerHTML = "<a href="https://firebasestorage.googleapis.com/v0/b/btn710group4.appspot.com/o/Deliverable3Report.docx?alt=media&token=d70647cd-8b0d-4c04-8c49-260f8f969edd">
+            <button class="btn"><i class="fa fa-download"></i> Download Report</button>
+            </a>";
            
             return;
           }
