@@ -23,9 +23,15 @@ var oktaSignIn = new OktaSignIn({
 
         window.location.hash='';
         
-        document.getElementById("video").innerHTML = "Video is at: https://www.youtube.com/watch?v=8t9h25DNNgU";
-        document.getElementById('downloadreport').innerHTML = "Report is at: https://firebasestorage.googleapis.com/v0/b/btn710group4.appspot.com/o/Deliverable3Report.docx?alt=media&token=d70647cd-8b0d-4c04-8c49-260f8f969edd"
-        document.getElementById("messageBox").innerHTML = "";
+        $("#messageBox").html("");
+        var $input = $('<a href="https://firebasestorage.googleapis.com/v0/b/btn710group4.appspot.com/o/Deliverable3Report.docx?alt=media&token=d70647cd-8b0d-4c04-8c49-260f8f969edd" target="_blank"><input type="button" value="Click here for report" /></a>');
+        $input.appendTo($("body"));
+        
+        var $input = $('<br></br>');
+        $input.appendTo($("body"))
+        
+        var $input = $('<a href="https://www.youtube.com/watch?v=8t9h25DNNgU" target="_blank"><input type="button" value="Click here for video" /></a>');
+        $input.appendTo($("body"));
     },
       function error(err) {
         console.error(err);
@@ -35,9 +41,15 @@ var oktaSignIn = new OktaSignIn({
     oktaSignIn.session.get(function (res) {
       // If we get here, the user is already signed in.
       if (res.status === 'ACTIVE') {
-        document.getElementById("video").innerHTML = "Video is at: https://www.youtube.com/watch?v=8t9h25DNNgU";
-       document.getElementById('downloadreport').innerHTML = "Report is at: https://firebasestorage.googleapis.com/v0/b/btn710group4.appspot.com/o/Deliverable3Report.docx?alt=media&token=d70647cd-8b0d-4c04-8c49-260f8f969edd"
-       document.getElementById("messageBox").innerHTML = ""; 
+        $("#messageBox").html("");
+       var $input = $('<a href="https://firebasestorage.googleapis.com/v0/b/btn710group4.appspot.com/o/Deliverable3Report.docx?alt=media&token=d70647cd-8b0d-4c04-8c49-260f8f969edd" target="_blank"><input type="button" value="Click here for report" /></a>');
+        $input.appendTo($("body"));
+
+        var $input = $('<br></br>');
+        $input.appendTo($("body"))
+
+        var $input = $('<a href="https://www.youtube.com/watch?v=8t9h25DNNgU" target="_blank"><input type="button" value="Click here for video" /></a>');
+        $input.appendTo($("body"));
        return;
       }
       oktaSignIn.renderEl(
