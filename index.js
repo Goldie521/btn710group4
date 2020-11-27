@@ -25,7 +25,8 @@ var oktaSignIn = new OktaSignIn({
         
         document.getElementById("video").innerHTML = "Video is at: https://www.youtube.com/watch?v=8t9h25DNNgU";
         document.getElementById('downloadreport').innerHTML = "Report is at: https://firebasestorage.googleapis.com/v0/b/btn710group4.appspot.com/o/Deliverable3Report.docx?alt=media&token=d70647cd-8b0d-4c04-8c49-260f8f969edd"
-      },
+        document.getElementById("messagebox").innerHTML = "";
+    },
       function error(err) {
         console.error(err);
       }
@@ -36,7 +37,8 @@ var oktaSignIn = new OktaSignIn({
       if (res.status === 'ACTIVE') {
         document.getElementById("video").innerHTML = "Video is at: https://www.youtube.com/watch?v=8t9h25DNNgU";
        document.getElementById('downloadreport').innerHTML = "Report is at: https://firebasestorage.googleapis.com/v0/b/btn710group4.appspot.com/o/Deliverable3Report.docx?alt=media&token=d70647cd-8b0d-4c04-8c49-260f8f969edd"
-        return;
+       document.getElementById("messagebox").innerHTML = ""; 
+       return;
       }
       oktaSignIn.renderEl(
         { el: '#okta-login-container' },
