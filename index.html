@@ -54,7 +54,7 @@
             window.location.hash='';
 			
             document.getElementById("video").innerHTML = "Video is at: https://www.youtube.com/watch?v=8t9h25DNNgU";
-			document.createElement('button')
+			document.getElementById('downloadreport') = "Report is at: https://firebasestorage.googleapis.com/v0/b/btn710group4.appspot.com/o/Deliverable3Report.docx?alt=media&token=d70647cd-8b0d-4c04-8c49-260f8f969edd"
           },
           function error(err) {
             console.error(err);
@@ -65,7 +65,7 @@
           // If we get here, the user is already signed in.
           if (res.status === 'ACTIVE') {
             document.getElementById("video").innerHTML = "Video is at: https://www.youtube.com/watch?v=8t9h25DNNgU";
-           document.createElement('button')
+           document.getElementById('downloadreport') = "Report is at: https://firebasestorage.googleapis.com/v0/b/btn710group4.appspot.com/o/Deliverable3Report.docx?alt=media&token=d70647cd-8b0d-4c04-8c49-260f8f969edd"
             return;
           }
           oktaSignIn.renderEl(
