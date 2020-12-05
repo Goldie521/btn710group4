@@ -42,7 +42,7 @@ var oktaSignIn = new OktaSignIn({
       // If we get here, the user is already signed in.
       if (res.status === 'ACTIVE') {
         $("#messageBox").html("");
-       var $input = $('<a href="https://firebasestorage.googleapis.com/v0/b/btn710group4.appspot.com/o/Deliverable3Report.docx?alt=media&token=d70647cd-8b0d-4c04-8c49-260f8f969edd" target="_blank"><input type="button" value="Click here for report" /></a>');
+       var $input = $('<a href="https://firebasestorage.googleapis.com/v0/b/btn710group4.appspot.com/o/Deliverable3Report.docx?alt=media&token=6ddf3234-d2ac-47cc-8763-8f45a774bc3c" target="_blank"><input type="button" value="Click here for report" /></a>');
         $input.appendTo($("body"));
 
         var $input = $('<br></br>');
